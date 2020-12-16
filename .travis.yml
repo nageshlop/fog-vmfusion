@@ -1,5 +1,7 @@
 language: ruby
-
+arch:
+  - amd64le
+  - ppc64le
 sudo: false
 dist: trusty
 
@@ -14,4 +16,7 @@ rvm:
 matrix:
   include:
     - rvm: 2.4
+      env: COVERAGE=true
+    - rvm: 2.4
+      arch: ppc64le
       env: COVERAGE=true
